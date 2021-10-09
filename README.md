@@ -31,7 +31,7 @@ apt install build-essential net-tools bridge-utils ethtool linux-image-amd64 xen
 &ensp; &ensp; &rarr;  `iptables-persistant` donne accès à la sauvegarde persistante de la configuration `iptables`  
 &ensp; &ensp; &rarr;  `bash-autocompletion` permet d'utiliser l'auto-complétion dans les commandes shell
 
-## Décommenter la section suivante dans le fichier `/etc/bash.bashrc` afin d'activer l'auto-complétion :
+* Décommenter la section suivante dans le fichier `/etc/bash.bashrc` afin d'activer l'auto-complétion :
 ```
 # enable bash completion in interactive shells
 if ! shopt -oq posix; then
