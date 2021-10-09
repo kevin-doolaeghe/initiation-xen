@@ -91,6 +91,7 @@ iface br0 inet static
         bridge_ports eno1
         bridge_waitport 0
         address 10.0.20.254/24
+        gateway 10.0.20.254
 ```
 &ensp; &ensp; &rarr;  `lo` est l'interface de bouclage  
 &ensp; &ensp; &rarr;  `eno1` est l'interface Ethernet  
@@ -107,14 +108,16 @@ nameserver 8.8.8.8
 
 ## Configuration de l'accès réseau pour la VM
 
-* Ajout d'une mascarade pour associer le réseau Wifi à celui de la VM :
+* Suppression des translations NAT déjà configurées :
 ```
 iptables -t nat -F
-iptables -t nat -A POSTROUTING -o wlo1 -s 10.0.20.0/24 -j MASQUERADE
+```
+
+* Ajout d'une mascarade pour associer le réseau Wifi à celui de la VM :
+```
+iptables -t nat -A POSTROUTING -o wlo1 -j MASQUERADE
 iptables -t nat -L
 ```
-&ensp; &ensp; &rarr;  `wlo1` est l'interface Wifi  
-&ensp; &ensp; &rarr;  `10.0.20.0/24` est le réseau des VM
 
 * Sauvegarder la configuration (le paquet `iptables-persistant` doit être installé) :
 ```
