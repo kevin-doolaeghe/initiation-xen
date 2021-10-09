@@ -20,7 +20,7 @@ apt update && apt upgrade
 
 * Installation des paquets ci-dessous :
 ```
-apt install build-essential net-tools bridge-utils ethtool linux-image-amd64 xen-hypervisor-4.14-amd64 xen-utils-4.14 xen-tools iptables-persistant
+apt install build-essential net-tools bridge-utils ethtool linux-image-amd64 xen-hypervisor-4.14-amd64 xen-utils-4.14 xen-tools iptables-persistant bash-autocompletion
 ```
 &ensp; &ensp; &rarr;  `build-essential` contient les paquets relatifs à la compilation  
 &ensp; &ensp; &rarr;  `net-tools` contient les paquets de base pour la configuration réseau  
@@ -28,7 +28,20 @@ apt install build-essential net-tools bridge-utils ethtool linux-image-amd64 xen
 &ensp; &ensp; &rarr;  `ethtool` est un utilitaire permettant d'afficher et de modifier certains paramètres de la carte réseau  
 &ensp; &ensp; &rarr;  `linux-image-amd64` est l'image de Debian utilisée pour les machines virtuelles  
 &ensp; &ensp; &rarr;  `xen-hypervisor-4.14-amd64`, `xen-utils-4.14` et `xen-tools` sont les paquets d'installation de Xen  
-&ensp; &ensp; &rarr;  `iptables-persistant` donne accès à la sauvegarde persistante de la configuration `iptables`
+&ensp; &ensp; &rarr;  `iptables-persistant` donne accès à la sauvegarde persistante de la configuration `iptables`  
+&ensp; &ensp; &rarr;  `bash-autocompletion` permet d'utiliser l'auto-complétion dans les commandes shell
+
+## Décommenter la section suivante dans le fichier `/etc/bash.bashrc` afin d'activer l'auto-complétion :
+```
+# enable bash completion in interactive shells
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+```
 
 ### Configuration réseau
 
