@@ -272,3 +272,9 @@ on_poweroff = 'destroy'
 on_reboot   = 'restart'
 on_crash    = 'restart'
 ```
+
+## Sources
+
+* [Guide pratique Xen](https://wiki.xenproject.org/wiki/Xen_Project_Beginners_Guide)
+* [Démarrer Xen avec un BIOS UEFI](https://wiki.xenproject.org/wiki/Xen_EFI#Compatibility_of_UEFI_Host_Firmware.2C_Xen_and_UEFI_Runtime_Services)
+* [Bridge avec interface WLAN](https://unix.stackexchange.com/questions/363332/how-do-i-configure-a-network-interface-bridge-from-wifi-to-ethernet-with-debian)
