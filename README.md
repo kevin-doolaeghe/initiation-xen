@@ -43,6 +43,11 @@ if ! shopt -oq posix; then
 fi
 ```
 
+* Edition du fichier `/etc/ssh/sshd_config` pour autoriser l'accès SSH avec l'utilisateur root :
+```
+PermitRootLogin yes
+```
+
 ### Configuration réseau
 
 * Désactivation de `NetworkManager` :
