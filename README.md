@@ -160,7 +160,7 @@ mkfs.ext4 /dev/storage/demineur-var
 ```
 &ensp; &ensp; &rarr; Ajout du pont dans dans la variable `vif` :
 ```
-vif         = [ 'mac=00:16:3E:D8:97:68, bridge=br0' ]
+vif = [ 'mac=00:16:3E:D8:97:68, bridge=br0' ]
 ```
 
 * Création de la VM :
@@ -208,6 +208,7 @@ xl list
 ```
 xen console demineur
 ```
+&ensp; &ensp; &rarr; Pour quitter le shell de la VM, il faut entrer `Ctrl`+`5`
 
 * Changement du mot de passe :
 ```
